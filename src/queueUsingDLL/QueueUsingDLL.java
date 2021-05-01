@@ -44,6 +44,19 @@ public class QueueUsingDLL {
         }
     }
 
+    public void size(){
+        if (isEmpty()) System.out.println("Size of queue is: 0");
+        else {
+            DLLNode temp = head;
+            int size = 0;
+            while (temp != null){
+                size++;
+                temp = temp.getNext();
+            }
+            System.out.println("Size of queue is: " + size);
+        }
+    }
+
     public boolean isEmpty(){
         return head == null;
     }
